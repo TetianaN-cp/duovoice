@@ -65,3 +65,8 @@ MIT License — applies only to the modules included in this repository.
 
 This is a **partial public release**.  
 The full Duo Voice system remains in active development and will be introduced gradually.
+
+## Additional Resources
+
+Full user documentation is available at:
+https://duo-voice.com/documentation
