@@ -47,14 +47,15 @@ These components remain private until a later stage of development.
 - Prepare the foundation for future open modules
 
 ## Repository Structure (minimal)
+```
 /modules
-/session-logger
-/chunking-helper
+    /session-logger
+    /chunking-helper
 /docs
-OVERVIEW.md
+    OVERVIEW.md
 LICENSE
 README.md
-
+```
 
 ## License
 
