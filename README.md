@@ -10,7 +10,7 @@ Only selected non‑critical components are published here to support transparen
 
 This public release includes **small, isolated modules** that are safe to open‑source:
 
-### ✔ Session Logger (minimal version)
+### ✔ UI Select (minimal version)
 A small standalone component for rendering and managing a custom dropdown selector.
 This module is part of the minimal public release of Duo Voice.
 
