@@ -17,8 +17,8 @@ A lightweight utility for recording structured session events:
 - text edits  
 - basic metadata  
 
-### ✔ Chunking Helper (minimal version)
-A simple helper for splitting text into manageable units for downstream processing.
+### ✔ Scroll Sync (minimal version)
+A small helper for synchronized scrolling between two containers, keeping both panels aligned and auto‑scrolling to the bottom when new content arrives.
 
 These modules are intentionally limited and do **not** represent the full Duo Voice pipeline.
 
@@ -50,7 +50,7 @@ These components remain private until a later stage of development.
 ```
 /modules
     /session-logger
-    /chunking-helper
+    /scroll-sync
 /docs
     OVERVIEW.md
 LICENSE
