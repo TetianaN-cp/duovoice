@@ -17,6 +17,9 @@ This module is part of the minimal public release of Duo Voice.
 ### ✔ Scroll Sync (minimal version)
 A small helper for synchronized scrolling between two containers, keeping both panels aligned and auto‑scrolling to the bottom when new content arrives.
 
+### ✔ WakeLock Helper (minimal version)
+Keeps the screen awake during active usage on mobile devices.
+
 These modules are intentionally limited and do **not** represent the full Duo Voice pipeline.
 
 ## What Is Not Included
@@ -48,6 +51,7 @@ These components remain private until a later stage of development.
 /modules
     /ui-select
     /scroll-sync
+    /wakelock-helper
 /docs
     OVERVIEW.md
 LICENSE
