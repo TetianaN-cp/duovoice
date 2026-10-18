@@ -46,7 +46,7 @@ These components remain private until a later stage of development.
 ## Repository Structure (minimal)
 ```
 /modules
-    /session-logger
+    /ui-select
     /scroll-sync
 /docs
     OVERVIEW.md
