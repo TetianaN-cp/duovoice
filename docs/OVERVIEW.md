@@ -16,7 +16,7 @@ This overview describes the project at a high level without exposing internal ar
 
 This repository contains only small, safe, standalone modules:
 
-- **Session Logger (minimal)** — records basic session events  
+- **UI Select (minimal)** — а small standalone component for rendering and managing a custom dropdown selector.  
 - **Scroll Sync (minimal)** — keeps two containers scrolled together and auto‑aligned at the bottom  
 
 These modules are intentionally limited and do not represent the full Duo Voice system.
