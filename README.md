@@ -24,7 +24,7 @@ Useful for chat‑like interfaces and real‑time text rendering.
 A minimal utility for keeping the screen awake during active usage on mobile devices.
 Automatically requests and releases the wake lock based on page visibility.
 
-# Note
+#### Note
 These modules are intentionally limited and do not represent the full Duo Voice pipeline, architecture, or real‑time systems.
 Only safe, standalone components are included in this public release.
 
