@@ -12,15 +12,21 @@ This public release includes **small, isolated modules** that are safe to open�
 
 ### ✔ UI Select (minimal version)
 A small standalone component for rendering and managing a custom dropdown selector.
+Provides clean DOM interaction, floating card positioning, and a change event for integration.
 This module is part of the minimal public release of Duo Voice.
 
 ### ✔ Scroll Sync (minimal version)
-A small helper for synchronized scrolling between two containers, keeping both panels aligned and auto‑scrolling to the bottom when new content arrives.
+A lightweight helper for synchronized scrolling between two containers.
+Keeps both panels aligned and auto‑scrolls to the bottom when new content arrives.
+Useful for chat‑like interfaces and real‑time text rendering.
 
 ### ✔ WakeLock Helper (minimal version)
-Keeps the screen awake during active usage on mobile devices.
+A minimal utility for keeping the screen awake during active usage on mobile devices.
+Automatically requests and releases the wake lock based on page visibility.
 
-These modules are intentionally limited and do **not** represent the full Duo Voice pipeline.
+# Note
+These modules are intentionally limited and do not represent the full Duo Voice pipeline, architecture, or real‑time systems.
+Only safe, standalone components are included in this public release.
 
 ## What Is Not Included
 
