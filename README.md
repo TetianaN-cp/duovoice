@@ -11,11 +11,8 @@ Only selected non‑critical components are published here to support transparen
 This public release includes **small, isolated modules** that are safe to open‑source:
 
 ### ✔ Session Logger (minimal version)
-A lightweight utility for recording structured session events:
-- timestamps  
-- source tags  
-- text edits  
-- basic metadata  
+A small standalone component for rendering and managing a custom dropdown selector.
+This module is part of the minimal public release of Duo Voice.
 
 ### ✔ Scroll Sync (minimal version)
 A small helper for synchronized scrolling between two containers, keeping both panels aligned and auto‑scrolling to the bottom when new content arrives.
