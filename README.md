@@ -1,9 +1,9 @@
 # Duo Voice (Public Minimal Release)
 
-Duo Voice is a browser‑based real‑time bilingual communication tool.  
-This repository contains a **minimal public subset** of the project: small, safe, standalone modules that do not expose the full internal pipeline.
+**Duo Voice** is a browser‑based real‑time bilingual communication tool.
+This repository contains a minimal public subset of the project: small, safe, standalone modules that do not expose the full internal pipeline.
 
-The full Duo Voice system includes real‑time speech recognition, synchronized bilingual display, translation, TTS, and session management.  
+The full Duo Voice system includes real‑time speech recognition, synchronized bilingual display, translation, TTS, and session management.
 Only selected non‑critical components are published here to support transparency, community interest, and early experimentation.
 
 ## What This Repository Contains
@@ -13,12 +13,10 @@ This public release includes **small, isolated modules** that are safe to open�
 ### ✔ UI Select (minimal version)
 A small standalone component for rendering and managing a custom dropdown selector.
 Provides clean DOM interaction, floating card positioning, and a change event for integration.
-This module is part of the minimal public release of Duo Voice.
 
 ### ✔ Scroll Sync (minimal version)
 A lightweight helper for synchronized scrolling between two containers.
 Keeps both panels aligned and auto‑scrolls to the bottom when new content arrives.
-Useful for chat‑like interfaces and real‑time text rendering.
 
 ### ✔ WakeLock Helper (minimal version)
 A minimal utility for keeping the screen awake during active usage on mobile devices.
