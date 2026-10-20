@@ -121,7 +121,7 @@ See LOCAL_RUN.md for instructions.
 ## 6. Open Ecosystem Components
 This repository includes:
 
-- open utility modules (see [modules](../modules)),
+- open utility [modules](../modules),
 - documentation,
 - architecture overview,
 - examples of local deployment.
