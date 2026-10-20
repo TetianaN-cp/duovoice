@@ -27,7 +27,7 @@ Duo Voice uses a modular pipeline:
 4. **Local NMT (CTranslate2)** - neural translation is performed without external APIs.
 5. **TTS Output** - translated speech is returned to the client for playback.
 6. **Bilingual Synchronization** - both sides receive translations in real time with paired partial/final updates.
-A detailed description is available in **ARCHITECTURE.md**.
+A detailed description is available in [ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Self-Hosting & Local Deployment
 
@@ -38,7 +38,7 @@ Duo Voice can run fully locally:
 - Local backend (Python/Node)
 - No Google Cloud, Azure, or OpenAI dependencies
 
-See **LOCAL_RUN.md** for instructions.
+See [LOCAL_RUN.md](docs/LOCAL_RUN.md) for instructions.
 
 ## Open Ecosystem
 
@@ -77,7 +77,7 @@ Additional contributors or contractors may be involved as funding allows.
 
 ## License
 
-MIT License — applies only to the modules included in this repository. The full production system is not open‑sourced. See LICENSE file.
+MIT License — applies only to the modules included in this repository. The full production system is not open‑sourced. See [LICENSE](LICENSE) file.
 
 ## Contact
 
