@@ -84,7 +84,7 @@ MIT License — applies only to the modules included in this repository. The ful
 For collaboration, pilots, or nonprofit use cases:
 duovoice.info@gmail.com
 
-## Additional Resources
+## Documentation
 
 Full user documentation is available at:
 https://duo-voice.com/documentation
