@@ -14,6 +14,7 @@ This setup runs fully offline and does not rely on Google Cloud, Azure, or OpenA
 
 ## 1. Requirements
 ### System
+This minimal setup is intended for demonstration and evaluation purposes.
 
 - Python
 - Node.js (optional for frontend)
@@ -44,6 +45,10 @@ models/nmt/
 This is a simplified example backend showing the structure of the real pipeline.
 It is not the production implementation.
 ```
+# This is a simplified demonstration backend.
+# The production system includes additional synchronization, pairing,
+# mobile stability logic, and long-session handling.
+
 import asyncio
 import websockets
 from vosk import Model, KaldiRecognizer
@@ -97,7 +102,8 @@ This backend:
 - runs fully offline
 
 ## 3. Minimal Browser Client (Audio Capture + WebSocket)
-This example shows how the client streams audio chunks to the backend.
+This example demonstrates the basic streaming mechanism used in Duo Voice.
+It shows how the client streams audio chunks to the backend.
 ```
 const ws = new WebSocket("ws://localhost:8000");
 
@@ -183,6 +189,8 @@ The purpose of this document is to demonstrate:
 without exposing proprietary production code.
 
 ## 6. Why This Matters
+Local deployment is a key requirement for decentralized, privacy‑sensitive environments.
+
 This minimal setup proves that Duo Voice:
 
 - can run fully offline,
