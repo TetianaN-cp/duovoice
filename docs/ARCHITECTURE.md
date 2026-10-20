@@ -24,7 +24,6 @@ The architecture prioritizes:
 
 ## 2. High-Level Pipeline
 Duo Voice uses a modular real-time pipeline:
-
 ```
 Audio Input → Chunking → WebSocket Stream → ASR → NMT → TTS → Output
 ```
@@ -90,6 +89,7 @@ Synchronization features include:
 This enables natural two‑way conversation without waiting for full sentences.
 
 ## 4. Mobile Stability Layer
+Mobile stability is a core requirement because Duo Voice is frequently used in real-world environments where users rely on smartphones.
 Mobile devices require additional handling:
 
 - automatic audio routing,
@@ -121,7 +121,7 @@ See LOCAL_RUN.md for instructions.
 ## 6. Open Ecosystem Components
 This repository includes:
 
-- open utility modules,
+- open utility modules (see [modules](../modules)),
 - documentation,
 - architecture overview,
 - examples of local deployment.
