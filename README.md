@@ -22,17 +22,11 @@ This repository contains open components, documentation, and architecture descri
 Duo Voice uses a modular pipeline:
 
 1. **Audio Capture (WebAudio)** - microphone input is chunked into small frames for low‑latency streaming.
-
 2. **Real‑Time Streaming (WebSocket)** - audio frames are sent to the backend with partial/final markers.
-
 3. **Local ASR (Vosk)** - speech recognition runs locally or on a self‑hosted server.
-
 4. **Local NMT (CTranslate2)** - neural translation is performed without external APIs.
-
 5. **TTS Output** - translated speech is returned to the client for playback.
-
 6. **Bilingual Synchronization** - both sides receive translations in real time with paired partial/final updates.
-
 A detailed description is available in **ARCHITECTURE.md**.
 
 ## Self-Hosting & Local Deployment
