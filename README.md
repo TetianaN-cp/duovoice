@@ -1,75 +1,94 @@
-# Duo Voice (Public Minimal Release)
+# Duo Voice — Real‑Time Bilingual Conversation Tool
 
-**Duo Voice** is a browser‑based real‑time bilingual communication tool.
-This repository contains a minimal public subset of the project: small, safe, standalone modules that do not expose the full internal pipeline.
+Duo Voice is a real‑time audio translation system designed for bilingual conversations, accessibility support, ESL learners, newcomers, and multilingual families.
+The project focuses on **low-latency speech‑to‑speech translation, local processing, and decentralized deployment**, without reliance on BigTech cloud APIs.
 
-The full Duo Voice system includes real‑time speech recognition, synchronized bilingual display, translation, TTS, and session management.
-Only selected non‑critical components are published here to support transparency, community interest, and early experimentation.
+Duo Voice is currently developed by a single independent engineer.
+This repository contains open components, documentation, and architecture describing how the system works and how it can be deployed locally.
 
-## What This Repository Contains
+## Key Features
 
-This public release includes **small, isolated modules** that are safe to open‑source:
+- Real‑time ASR → NMT → TTS pipeline
+- Local speech recognition (Vosk)
+- Local neural machine translation (CTranslate2)
+- WebAudio + WebSocket streaming for low‑latency audio
+- Chunking & partial/final synchronization
+- Bilingual pairing for two‑way conversations
+- Mobile‑optimized interface with auto‑mute loop
+- Designed for accessibility and long sessions
 
-### ✔ UI Select (minimal version)
-A small standalone component for rendering and managing a custom dropdown selector.
-Provides clean DOM interaction, floating card positioning, and a change event for integration.
+## Architecture Overview
 
-### ✔ Scroll Sync (minimal version)
-A lightweight helper for synchronized scrolling between two containers.
-Keeps both panels aligned and auto‑scrolls to the bottom when new content arrives.
+Duo Voice uses a modular pipeline:
 
-### ✔ WakeLock Helper (minimal version)
-A minimal utility for keeping the screen awake during active usage on mobile devices.
-Automatically requests and releases the wake lock based on page visibility.
+1. **Audio Capture (WebAudio)** - microphone input is chunked into small frames for low‑latency streaming.
 
-#### Note
-These modules are intentionally limited and do not represent the full Duo Voice pipeline, architecture, or real‑time systems.
-Only safe, standalone components are included in this public release.
+2. **Real‑Time Streaming (WebSocket)** - audio frames are sent to the backend with partial/final markers.
 
-## What Is Not Included
+3. **Local ASR (Vosk)** - speech recognition runs locally or on a self‑hosted server.
 
-To protect the integrity of the project, this repository does **not** include:
+4. **Local NMT (CTranslate2)** - neural translation is performed without external APIs.
 
-- real‑time audio pipeline  
-- ASR logic  
-- translation pipeline  
-- TTS queueing  
-- synchronization logic  
-- UI/UX components  
-- WebAudio or WebSocket streaming  
-- mobile auto‑mute logic  
-- system audio capture  
-- full session engine  
+5. **TTS Output** - translated speech is returned to the client for playback.
 
-These components remain private until a later stage of development.
+6. **Bilingual Synchronization** - both sides receive translations in real time with paired partial/final updates.
 
-## Project Goals (Public Version)
+A detailed description is available in **ARCHITECTURE.md**.
 
-- Provide a minimal, safe preview of Duo Voice internals  
-- Share small utilities that may be useful to developers  
-- Build early community interest without exposing core architecture  
-- Prepare the foundation for future open modules
+## Self-Hosting & Local Deployment
 
-## Repository Structure (minimal)
-```
-/modules
-    /ui-select
-    /scroll-sync
-    /wakelock-helper
-/docs
-    OVERVIEW.md
-LICENSE
-README.md
-```
+Duo Voice can run fully locally:
 
-## License
+- Local ASR (Vosk)
+- Local NMT (CTranslate2)
+- Local backend (Python/Node)
+- No Google Cloud, Azure, or OpenAI dependencies
 
-MIT License — applies only to the modules included in this repository.
+See **LOCAL_RUN.md** for instructions.
+
+## Open Ecosystem
+
+This repository includes:
+
+- documentation
+- architecture
+- examples of local deployment
+- open utility modules:
+	- **UI Select** - a small standalone component for rendering and managing a custom dropdown selector.
+	Provides clean DOM interaction, floating card positioning, and a change event for integration.
+	- **Scroll Sync** - a lightweight helper for synchronized scrolling between two containers.
+	Keeps both panels aligned and auto‑scrolls to the bottom when new content arrives.
+	- **WakeLock Helper** - a minimal utility for keeping the screen awake during active usage on mobile devices.
+	Automatically requests and releases the wake lock based on page visibility.
+
+
+The full production system is not open-sourced, but the project follows an **open-ecosystem model**, enabling:
+
+- community contributions,
+- local hosting,
+- integration with nonprofit and educational organizations.
+
+## Use Cases
+
+- ESL learners and newcomers
+- Multilingual families
+- Community centers and nonprofits
+- Accessibility support (hearing assistance, low‑literacy environments)
+- Real‑time bilingual communication
 
 ## Status
 
-This is a **partial public release**.  
-The full Duo Voice system remains in active development and will be introduced gradually.
+Duo Voice is actively developed.
+Additional contributors or contractors may be involved as funding allows.
+
+## License
+
+MIT License — applies only to the modules included in this repository. The full production system is not open‑sourced. See LICENSE file.
+
+## Contact
+
+For collaboration, pilots, or nonprofit use cases:
+duovoice.info@gmail.com
 
 ## Additional Resources
 
