@@ -25,7 +25,9 @@ The architecture prioritizes:
 ## 2. High-Level Pipeline
 Duo Voice uses a modular real-time pipeline:
 
-```Audio Input → Chunking → WebSocket Stream → ASR → NMT → TTS → Output```
+```
+Audio Input → Chunking → WebSocket Stream → ASR → NMT → TTS → Output
+```
 
 Each stage is independent and can run locally or on a self-hosted server.
 
