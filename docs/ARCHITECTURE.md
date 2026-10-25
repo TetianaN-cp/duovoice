@@ -43,7 +43,7 @@ Duo Voice captures audio from two independent sources:
 
 Both streams are processed independently and transmitted through separate real‑time channels. Recognition, translation, and synchronization occur independently for each source before results are combined within the user interface.
 
-When browser audio is used, headphones are recommended to prevent the microphone from capturing playback audio and creating feedback loops.
+When microphone capture and browser audio playback are used simultaneously, headphones are recommended to prevent playback audio from being re-captured by the microphone and creating feedback loops.
 
 ### 2.2 Chunking & Partial/Final Frames
 Audio is streamed as:
