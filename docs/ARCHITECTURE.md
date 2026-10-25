@@ -25,14 +25,24 @@ The architecture prioritizes:
 ## 2. High-Level Pipeline
 Duo Voice uses a modular real-time pipeline:
 ```
-Audio Input → Chunking → WebSocket Stream → ASR → NMT → TTS → Output
+Microphone Audio ──→ Chunking ─→ WebSocket ─→ ASR ─→ NMT ─┐
+                                                           │
+                                                           ├→ Synchronization → UI → TTS
+                                                           │
+Browser Audio ─────→ Chunking ─→ WebSocket ─→ ASR ─→ NMT ─┘
 ```
 
 Each stage is independent and can run locally or on a self-hosted server.
 
 ### 2.1 Audio Input (WebAudio)
-The client captures microphone audio using WebAudio.
-Audio is segmented into small frames (chunks) to minimize latency.
+Duo Voice captures audio from two independent sources:
+
+- **Microphone audio** (available on all supported devices)
+- **Browser/system audio** (available on desktop platforms)
+
+Both streams are processed independently and transmitted through separate real‑time channels. Recognition, translation, and synchronization occur independently for each source before results are combined within the user interface.
+
+When browser audio is used, headphones are recommended to prevent the microphone from capturing playback audio and creating feedback loops.
 
 ### 2.2 Chunking & Partial/Final Frames
 Audio is streamed as:
