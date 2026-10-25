@@ -26,9 +26,9 @@ The architecture prioritizes:
 Duo Voice uses a modular real-time pipeline:
 ```
 Microphone Audio ──→ Chunking ─→ WebSocket ─→ ASR ─→ NMT ─┐
-                                                           │
-                                                           ├→ Synchronization → UI
-                                                           │         │
+                                                          │
+                                                          ├→ Synchronization → UI
+                                                          │          │
 Browser Audio ─────→ Chunking ─→ WebSocket ─→ ASR ─→ NMT ─┘          ▼
                                                                 Optional TTS
 ```
