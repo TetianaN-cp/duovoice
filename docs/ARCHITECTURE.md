@@ -27,9 +27,10 @@ Duo Voice uses a modular real-time pipeline:
 ```
 Microphone Audio ──→ Chunking ─→ WebSocket ─→ ASR ─→ NMT ─┐
                                                            │
-                                                           ├→ Synchronization → UI → TTS
-                                                           │
-Browser Audio ─────→ Chunking ─→ WebSocket ─→ ASR ─→ NMT ─┘
+                                                           ├→ Synchronization → UI
+                                                           │         │
+Browser Audio ─────→ Chunking ─→ WebSocket ─→ ASR ─→ NMT ─┘          ▼
+                                                                Optional TTS
 ```
 
 Each stage is independent and can run locally or on a self-hosted server.
